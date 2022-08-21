@@ -76,10 +76,10 @@ function LoginPage() {
                     </table>
                 </form>
 
-                <Button type="submit">제출하기</Button>
+                <Button type="submit">확 인</Button>
                 <p>
                     <a href="" class="download">지원서 다운로드</a>
-                    <a href="" class="download_upload">지원서 제출</a>
+                    <a href="" class="download_upload">지원서 및 과제 제출</a>
                 </p>
             </div>
         </div>

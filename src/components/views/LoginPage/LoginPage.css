@@ -1,0 +1,66 @@
+.nav {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.nav .logo {
+    font-weight: 600;
+    font-size: 25px;
+    color: #ec1468;
+}
+
+.nav .nav_but a {
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+}
+
+
+.Box {
+    width: 840px;
+    height: 1050px;
+    justify-content: space-between;
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.table {
+    /* margin-left: auto;
+    margin-right: auto; */
+    text-align: center;
+
+}
+
+.info {
+    height: 80px;
+}
+
+.info_title {
+    width: 280px;
+    text-align: right;
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 550;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.info_input {
+    text-align: left;
+}
+
+.download{
+    color: #ec1468;
+}
+

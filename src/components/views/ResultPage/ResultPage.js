@@ -1,5 +1,5 @@
 import React from 'react'
-import "./LoginPage.css";
+import "./ResultPage.css";
 import styled from "styled-components";  //React 컴포넌트 스타일링
 
 function LoginPage() {
@@ -37,6 +37,7 @@ function LoginPage() {
 
 
     return (
+        // function pass(){}
         <div class="back">
             <div class="nav">
                 <div class="logo">
@@ -76,7 +77,7 @@ function LoginPage() {
                     </table>
                 </form>
 
-                <Button type="submit">결과 확인하기</Button>
+                <Button type="submit">확 인</Button>
                 
             </div>
         </div>

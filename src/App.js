@@ -7,6 +7,7 @@ import {
 
 import LandingPage from './components/views/LandingPage/LandingPage';
 import LoginPage from './components/views/LoginPage/LoginPage';
+import ResultPage from './components/views/ResultPage/ResultPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route exact path='/' element = {<LandingPage />} />
             <Route path='/LoginPage' element = {<LoginPage />} />
+            <Route path='/ResultPage' element = {<ResultPage />} />
           </Routes>
       </Router>
     </div>

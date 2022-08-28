@@ -1,7 +1,9 @@
 import React from 'react';
 import "./LandingPage.css";
+import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css"; 
+import Nav from "./nav";
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 /* 이화이언 소개 */
@@ -74,49 +76,56 @@ const activities = [
     title: "배꽃정원",
     des: "2021.11.15 ~ 2021.11.26",
     link: "http://www.ewhaian.com/Ewha_board/Ewha_View.asp?psize=1&page=1&es_idx=0&ct_idx=0&bm_idx=11&sfield=&bp_idx=2073922&orderby=0&startDt=2001-01-01&endDt=2022-01-24&sword_type=&inputTagList=&bordtype=&sword=&useSdate=&sword2=5707819",
+    img: "img/아이콘.png"
   },
   {
     title: "이화이언 스무 번째 봄",
     des: "2021.05.17 ~ 2021.05.23",
     link: "http://www.ewhaian.com/Ewha_board/Ewha_View.asp?psize=1&page=1&es_idx=0&ct_idx=0&bm_idx=11&sfield=&bp_idx=2030159&orderby=0&startDt=2001-01-01&endDt=2021-08-23&sword_type=&inputTagList=&bordtype=&sword=&useSdate=&sword2=8384363",
+    img: "img/아이콘.png"
   },
   {
     title: "배꽃정원",
     des: "2020.11.16 ~ 2020.11.22",
     link: "http://www.ewhaian.com/Ewha_board/Ewha_View.asp?psize=1&page=1&es_idx=0&ct_idx=0&bm_idx=11&sfield=&bp_idx=1953722&orderby=0&startDt=2001-01-01&endDt=2021-08-23&sword_type=&inputTagList=&bordtype=&sword=&useSdate=&sword2=6528086",
+    img: "img/아이콘.png"
   },
   {
     title: "사이버캠퍼스",
     des: "2020.05.18 ~ 2020.05.29",
     link: "http://www.ewhaian.com/Ewha_board/Ewha_View.asp?psize=1&page=1&es_idx=0&ct_idx=0&bm_idx=11&sfield=&bp_idx=1896845&orderby=0&startDt=2001-01-01&endDt=2021-08-23&sword_type=&inputTagList=&bordtype=&sword=&useSdate=&sword2=4752711",
+    img: "img/아이콘.png"
   },
   {
     title: "배꽃정원",
     des: "2019.11.21",
     link: "http://www.ewhaian.com/Ewha_board/Ewha_View.asp?psize=1&page=1&es_idx=0&ct_idx=0&bm_idx=11&sfield=&bp_idx=1778635&orderby=0&startDt=2001-01-01&endDt=2021-08-25&sword_type=&inputTagList=&bordtype=&sword=&useSdate=&sword2=9369912",
+    img: "img/아이콘.png"
   },
   {
-    img: "img/세븐틴.jpg",
     title: "오월드림",
     des: "2019.05.23",
     link: "http://www.ewhaian.com/Ewha_board/Ewha_View.asp?psize=1&page=1&es_idx=0&ct_idx=0&bm_idx=11&sfield=&bp_idx=1720733&orderby=0&startDt=2001-01-01&endDt=2021-08-23&sword_type=&inputTagList=&bordtype=&sword=&useSdate=&sword2=9412045",
+    img: "img/아이콘.png"
   },
   {
     title: "배꽃정원",
     des: "2018.11.29",
     link: "http://www.ewhaian.com/Ewha_board/Ewha_View.asp?psize=1&page=1&es_idx=0&ct_idx=0&bm_idx=11&sfield=&bp_idx=1628376&orderby=0&startDt=2001-01-01&endDt=2021-08-25&sword_type=&inputTagList=&bordtype=&sword=&useSdate=&sword2=8669192",
+    img: "img/아이콘.png"
   },
   {
     title: "이화이언 생일파티",
     des: "2018.05.24",
     link: "http://www.ewhaian.com/Ewha_board/Ewha_View.asp?psize=1&page=1&es_idx=0&ct_idx=0&bm_idx=11&sfield=&bp_idx=1428124&orderby=0&startDt=2001-01-01&endDt=2021-08-25&sword_type=&inputTagList=&bordtype=&sword=&useSdate=&sword2=3445512",
+    img: "img/아이콘.png"
   },
 ];
 
 
 
 function LandingPage() {
-  
+
   /* react-slick으로 슬라이드 구현 */
   function Slide() {
     function SampleNextArrow(props) {
@@ -129,7 +138,7 @@ function LandingPage() {
         />
       );
     }
-    
+
     function SamplePrevArrow(props) {
       const { className, style, onClick } = props;
       return (
@@ -140,81 +149,70 @@ function LandingPage() {
         />
       );
     }
-    
+
     const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
-        
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
-            }
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
+
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
           },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            },
-          },
-        ],
-      };
-  return (
-    <div>
-      <Slider {...settings}>
-        {activities.map((item, i) => {
-          return (
-            <div className="s_box">
-              <div style={{ position: "relative", marginTop: "2rem" }}>
-              <SamplePrevArrow />
+        },
+      ],
+    };
+    return (
+      <div>
+        <Slider {...settings}>
+          {activities.map((item, i) => {
+            return (
+              <div className="s_box">
+                <div style={{ position: "relative", marginTop: "2rem" }}>
+                  <SamplePrevArrow />
+                </div>
+                <div className="s_img"><img src={activities[i].img}/></div>
+                <div className="s_title"><b>{activities[i].title}</b></div>
+                <div className="s_des">{activities[i].des}</div>
+                <div className="s_link"><a href={activities[i].link}>이벤트 스케치</a></div>
               </div>
-               <div className="s_title"><b>{activities[i].title}</b></div>
-              <div className="s_des">{activities[i].des}</div>
-              <div className="s_link"><a href={activities[i].link}>이벤트 스케치</a></div>
-            </div>
-          )
-        })}
-      </Slider>
-    </div>
-  )
-}
+            )
+          })}
+        </Slider>
+      </div>
+    )
+  }
 
 
   return (
 
     <div>
-      <div class="nav">
-        <div class="logo">
-          이화이언
-        </div>
-        <div class="nav_but">
-          <a href="">지원하기</a>
-          <a href="">결과 확인</a>
-          <a href="">메인으로</a>
-        </div>
-
-      </div>
-
-
+      <Nav />
       <div className="intro">이화이언 소개</div>
       <table className="table">
         {tableContent.map((list, i) => {
@@ -226,7 +224,7 @@ function LandingPage() {
           );
         })}
       </table>
-      
+
 
 
       <div className="intro">팀 소개</div>
@@ -234,7 +232,7 @@ function LandingPage() {
         {teamInfo.map((list, i) => {
           return (
             <div className="teamContent">
-              
+
               <div className="team-name">{teamInfo[i].name}</div>
               <br />
               <div className="teamlist" style={{ marginTop: "70px" }}>
@@ -261,11 +259,11 @@ function LandingPage() {
       <br />
       <br />
       <div className="intro">지난 행사들</div>
-        <div>{Slide()}</div>
+      <div>{Slide()}</div>
     </div>
-    
-    
-    
+
+
+
   )
 }
 

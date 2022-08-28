@@ -1,10 +1,15 @@
-import React from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom';
+import "../LoginPage/LoginPage.css";
 import Nav from "../LandingPage/nav"
-import "./LoginPage.css";
 import styled from "styled-components";  //React 컴포넌트 스타일링
 
-function LoginPage() {
+
+
+
+function Result() {
+
+
 
     const Input = styled.input`
         position: relative;
@@ -39,15 +44,14 @@ function LoginPage() {
 
 
     return (
+        // function pass(){}
         <div class="back">
             <Nav />
-
-            <img src="client\src\배너.png" alt=""></img>
 
 
             <div class="Box">
                 <div>
-                    <h1>지원하기</h1>
+                    <h1>결과 확인</h1>
                 </div>
 
                 <form>
@@ -67,11 +71,19 @@ function LoginPage() {
                     </table>
                 </form>
 
-                <Button type="submit">확 인</Button>
+                <Button type="submit">
+                    <Link
+                        to="/ResultPage"
+                        style={{ textDecoration: "none", color: "#ffffff" }}
+                    >
+                        확 인
+                    </Link>
+                </Button>
 
             </div>
+
         </div>
     )
 }
 
-export default LoginPage
+export default Result

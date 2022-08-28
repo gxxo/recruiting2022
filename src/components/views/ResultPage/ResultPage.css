@@ -1,0 +1,88 @@
+.pass_logo {
+    width: 122px;
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.pass_title {
+    color: #ec1468;
+    font-size: 45px;
+    /*폰트 크기*/
+    font-style: normal;
+    /*폰트 종류*/
+    font-weight: 700;
+    /*폰트 굵기*/
+    letter-spacing: 0em;
+    /*글자 사이 간격*/
+    text-align: center;
+    /*블록 요소 가로 정렬*/
+    padding-top: 80px;
+    padding-bottom: 31px;
+}
+
+.pass_des1 {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    text-align: center;
+    color: #ec1468;
+    font-size: 20px;
+    font-weight: 500;
+    word-break: keep-all;
+    /*텍스트가 자신의 콘텐프 밖으로 오버플로 시, 줄을 바꿀 때 단어를 끊지 않음*/
+}
+
+.pass_des2 {
+    margin-bottom: 100;
+    text-align: center;
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 500;
+    word-break: keep-all;
+    color: #666666;
+}
+
+.survey {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 200px;
+}
+
+.survey a {
+    color: #666666;
+}
+
+
+
+.prework {
+    margin: 0 auto;
+    /*위아래 여백 없고, 가로 중앙정렬*/
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 840px;
+    text-align: center;
+    border: 1px solid #c4c4c4;
+    display: block;
+
+}
+
+.prework__ {
+    display: inline-block;
+    width: 700px;
+    text-align: center;
+    word-break: keep-all;
+}
+
+.prework_highlight {
+    color: #ec1468;
+    font-weight: 700;
+}
+
+.apply-success img {
+    width: 60px;
+    display: block;
+    margin: 0px auto;
+    padding-top: 174px;
+    margin-bottom: 20px;
+}
